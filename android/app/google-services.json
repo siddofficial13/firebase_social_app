@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "551298832594",
+    "project_id": "fir-social-app-62b3e",
+    "storage_bucket": "fir-social-app-62b3e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:551298832594:android:f6ebeaed40774a8c84750b",
+        "android_client_info": {
+          "package_name": "com.firebase_social_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA7ZAVEzdPzmM5bexkpsrCBBG704EhzEKg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
