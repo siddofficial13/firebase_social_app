@@ -8,6 +8,7 @@ import {
 } from 'react-native';
 import firestore from '@react-native-firebase/firestore';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+
 const AddTab = () => {
   const [postTitle, setPostTitle] = useState('');
   const [postCaption, setPostCaption] = useState('');

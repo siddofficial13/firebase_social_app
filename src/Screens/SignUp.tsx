@@ -28,7 +28,7 @@ const SignUp = () => {
         name: name,
       })
       .then(() => {
-        saveLocalUserData();
+        // saveLocalUserData();
         console.log('User added successfully!!');
         navigation.navigate('Login');
       });

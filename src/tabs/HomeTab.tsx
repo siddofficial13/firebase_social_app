@@ -37,12 +37,18 @@ const HomeTab = () => {
       <View style={styles.banner}>
         <Text style={styles.bannerText}>Firebase Social Media</Text>
       </View>
-      <FlatList
-        data={postData}
-        renderItem={renderPostItem}
-        keyExtractor={(item, index) => index.toString()}
-        contentContainerStyle={styles.postList}
-      />
+      <View style={{flex: 1}}>
+        <FlatList
+          data={postData}
+          renderItem={renderPostItem}
+          keyExtractor={(item, index) => index.toString()}
+          contentContainerStyle={styles.postList}
+        />
+      </View>
+      {/* Your component that should always remain visible at the bottom */}
+      <View style={styles.bottomComponent}>
+        {/* Add your bottom component here */}
+      </View>
     </SafeAreaView>
   );
 };
@@ -51,7 +57,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    // paddingTop: 10, // Add some spacing at the top
   },
   banner: {
     backgroundColor: '#007BFF', // Blue color for the banner
@@ -67,7 +72,7 @@ const styles = StyleSheet.create({
   },
   postList: {
     paddingHorizontal: 10,
-    margin: 10,
+    paddingBottom: 16, // Adjusted to accommodate bottom component
   },
   postContainer: {
     backgroundColor: '#FFFFFF', // White color for the post container
@@ -94,6 +99,13 @@ const styles = StyleSheet.create({
   postCaption: {
     fontSize: 14,
     color: '#666',
+  },
+  bottomComponent: {
+    // Style your bottom component here
+    height: 100, // Adjust as per your requirement
+    backgroundColor: 'lightgrey', // Example background color
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });
 

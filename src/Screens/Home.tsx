@@ -21,9 +21,9 @@ const Home = ({navigation}: HomeProps) => {
       <Text style={styles.text1}>Firebase</Text>
       <Text style={styles.text2}>The Social App</Text>
       <Button
-        title="Go to details page"
+        title="Go to Details page"
         onPress={() => {
-          navigation.navigate('Details', {product: item});
+          navigation.navigate('Details');
         }}
       />
     </View>

@@ -1,8 +1,13 @@
 import React, {useEffect} from 'react';
 import MainNavigator from './Screens/MainNavigator';
 import {PermissionsAndroid, Platform} from 'react-native';
-import {requestUserPermission} from './utils/notificationServices';
-
+import {
+  NotificationListeners,
+  requestUserPermission,
+} from './utils/notificationServices';
+import {AuthProvider} from './AuthProvider';
+import {NavigationContainer} from '@react-navigation/native';
+import NavigationService from './utils/NavigationService.js';
 const App = () => {
   useEffect(() => {
     if (Platform.OS === 'android') {
@@ -13,6 +18,8 @@ const App = () => {
           console.log('Response:  ', response);
           if (!!response && response === 'granted') {
             requestUserPermission();
+
+            NotificationListeners();
           }
         })
         .catch(error => {
@@ -21,7 +28,14 @@ const App = () => {
     }
   }, []);
 
-  return <MainNavigator />;
+  return (
+    <NavigationContainer
+      ref={ref => NavigationService.setTopLevelNavigator(ref)}>
+      <AuthProvider>
+        <MainNavigator />
+      </AuthProvider>
+    </NavigationContainer>
+  );
 };
 
 export default App;

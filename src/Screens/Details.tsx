@@ -1,18 +1,18 @@
 import {Button, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import {useNavigation} from '@react-navigation/native';
-import {NativeStackScreenProps} from '@react-navigation/native-stack';
-import {RootStackParamList} from './MainNavigator';
+// import {NativeStackScreenProps} from '@react-navigation/native-stack';
+// import {RootStackParamList} from './MainNavigator';
 
-type DetailsProps = NativeStackScreenProps<RootStackParamList, 'Details'>;
+// type DetailsProps = NativeStackScreenProps<RootStackParamList, 'Details'>;
 
-const Details = ({route}: DetailsProps) => {
-  const {product} = route.params;
+const Details = () => {
+  // const {product} = route.params;
 
   const navigation = useNavigation();
   return (
     <View style={styles.container}>
-      <Text>{product.id}</Text>
+      <Text>Welcome to Details Page</Text>
       <Button
         title="Go to Login page"
         onPress={() => {
